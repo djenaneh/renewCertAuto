@@ -4,6 +4,8 @@ Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
 
 Get-ExchangeCertificate | fl
 
+$subjectName="CN=mail.herrod.xyz"
 
+$path
 
-#New-ExchangeCertificate -GenerateRequest -SubjectName "CN=mail.contoso.com" -PrivateKeyExportable $true -KeySize 2048 -Path "C:\certificates\mail.contoso.com.csr"
+New-ExchangeCertificate -GenerateRequest -SubjectName $subjectName -PrivateKeyExportable $true -KeySize 2048 -Path "C:\certificates\mail.contoso.com.csr"
